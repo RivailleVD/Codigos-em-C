@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "configurations": [
     {
       "name": "windows-gcc-x86",
@@ -15,4 +16,23 @@
     }
   ],
   "version": 4
+=======
+    "configurations": [
+        {
+            "name": "linux-gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/glib-2.0"
+            ],
+            "compilerPath": "/usr/sbin/gcc",
+            "cStandard": "${default}",
+            "cppStandard": "${default}",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": [
+                ""
+            ]
+        }
+    ],
+    "version": 4
+>>>>>>> 55eaaa4d5b85995d257946a5f3835b152a21a083
 }
