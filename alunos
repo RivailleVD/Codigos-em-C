@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct
+{
+    char nome[100];
+    char curso[20];
+    int mat;
+} Aluno;
+
+void MostrarAluno(Aluno a){
+printf("Nome: %s\n", a.nome);
+printf("Curso: %s\n", a.curso);
+printf("Matricula: %d\n", a.mat);
+}
+
+int main() {
+Aluno Vetor[2];
+Aluno aluno;
+int count = 2;
+for (size_t i = 0; i < count; i++) {
+printf("Digite o seu nome: ");
+fgets(aluno.nome, sizeof(aluno.nome), stdin);
+aluno.nome[strcspn(aluno.nome, "\n")] = '\0'; // Remove o caractere de nova linha
+
+printf("Digite o seu curso: ");
+fgets(aluno.curso, sizeof(aluno.curso), stdin);
+aluno.curso[strcspn(aluno.curso, "\n")] = '\0'; // Remove o caractere de nova linha
+
+printf("Digite a Matricula: ");
+scanf("%d", &(aluno.mat)); // Corrige o erro de compilação
+getchar(); // Limpa o buffer do stdin
+
+Vetor[i] = aluno; // Armazena o aluno no vetor na posição correta
+}
+
+    for (size_t i = 0; i < count; i++) {
+        MostrarAluno(Vetor[i]); // Mostra os dados de cada aluno
+    }
+
+    return 0;
+}
